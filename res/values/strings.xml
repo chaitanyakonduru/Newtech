@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+<string name="description_logo">NewTec Supply system</string>
+    <string name="hello">Hello World, SupplyChainActivity!</string>
+    <string name="app_name">NewTec</string>
+    <string name="home_orders">Orders</string>
+    <string name="home_products">Products</string>
+    <string name="customers">Customers</string>
+    <string name="home_myaccount">My Account</string>
+    <string name="home_reports">Reports</string>
+    <string name="home_settings">Settings</string>
+<string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="alert_dialog_title">Select Business Name</string>
+	 <string name="discoverable">Make discoverable</string>
+	  <string name="bt_not_enabled_leaving">Bluetooth was not enabled.</string>
+	  
+	  <string name="noorders">No Orders</string>
+	   <string name="noproducts">No Products</string>
+	    <string name="nocustomers">No Customers</string>
+	    
+</resources>

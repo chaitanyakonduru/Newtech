@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Mobile/!svn/ver/1923/Android/NewTec/src/com/logictree/supply/network
+END
+NewTecSyncService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/network/NewTecSyncService.java
+END
+RequestThreadPoolExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Mobile/!svn/ver/1516/Android/NewTec/src/com/logictree/supply/network/RequestThreadPoolExecutor.java
+END
+NamedThreadFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/network/NamedThreadFactory.java
+END
+SyncBroadcast.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/network/SyncBroadcast.java
+END
+DatabaseThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/network/DatabaseThread.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Mobile/!svn/ver/1526/Android/NewTec/src/com/logictree/supply/network/Util.java
+END
+MyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/network/MyHandler.java
+END
+NewTecException.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/network/NewTecException.java
+END
+RemembermeBroadcast.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Mobile/!svn/ver/1509/Android/NewTec/src/com/logictree/supply/network/RemembermeBroadcast.java
+END
+RemebermeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Mobile/!svn/ver/1509/Android/NewTec/src/com/logictree/supply/network/RemebermeService.java
+END
+NewTecCallback.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/network/NewTecCallback.java
+END
+NewTecResponseHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Mobile/!svn/ver/1850/Android/NewTec/src/com/logictree/supply/network/NewTecResponseHandler.java
+END
+SyncwithService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Mobile/!svn/ver/1880/Android/NewTec/src/com/logictree/supply/network/SyncwithService.java
+END
+HttpConn.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Mobile/!svn/ver/1805/Android/NewTec/src/com/logictree/supply/network/HttpConn.java
+END
+ApiManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Mobile/!svn/ver/2092/Android/NewTec/src/com/logictree/supply/network/ApiManager.java
+END

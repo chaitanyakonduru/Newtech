@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:scaleType="center"
+        android:src="@drawable/logo_home" />
+	<TextView  android:layout_marginTop="29dp"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  
+            android:textStyle="bold"  
+            android:typeface="serif"  
+            android:textSize="28dp"  
+            android:background="#919191"
+            android:text="Login"  
+            android:gravity="center"  
+            />  
+    <TableLayout  
+    android:layout_width="match_parent"  
+    android:padding="10dp" android:layout_margin="50dp"
+   android:layout_gravity="center"
+    android:stretchColumns="*"
+    android:shrinkColumns="*" android:layout_height="wrap_content">  
+    <TableRow  
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"  
+        android:layout_width="match_parent">  
+        <TextView  
+            android:textSize="22sp"
+            style="@style/left_text"
+            android:textStyle="bold"  
+            android:typeface="serif"
+            android:text="User Name"/>  
+            <LinearLayout android:layout_width="0dp" 
+                android:layout_height="wrap_content" android:layout_weight="1">
+    
+                <EditText
+            android:layout_width="wrap_content" android:singleLine="true"
+            android:id="@+id/username"  android:paddingLeft="3dp"  android:paddingRight="3dp"
+            android:layout_height="wrap_content" android:maxWidth="300dp"
+             android:minWidth="300dp" />
+      </LinearLayout>
+        <!-- <EditText  
+            android:textSize="22sp"
+            android:typeface="serif"
+            android:textStyle="bold" />  -->
+    </TableRow>  
+    <TableRow  
+        android:layout_height="wrap_content"  
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent">  
+        <TextView  
+            android:text="Password"
+            style="@style/left_text"
+            android:typeface="serif"
+            android:textStyle="bold"
+             android:textSize="22sp"/>  
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" 
+                android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content" android:maxWidth="300dp"
+            android:layout_height="wrap_content" android:singleLine="true"
+            android:minWidth="300dp" android:password="true" android:paddingRight="3dp"
+            android:paddingLeft="3dp"/>
+
+      </LinearLayout>
+    </TableRow>  
+    <TableRow  
+        android:layout_height="wrap_content"  
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent">  
+
+        <CheckBox
+            android:id="@+id/remember_me"
+            android:layout_gravity="right"
+            android:paddingRight="10dp"
+            android:text="Remeber me"
+            android:textSize="22sp" />
+  
+        <TextView  android:paddingLeft="30dp" android:id="@+id/forgot_pw"
+            android:paddingTop="5dp"
+            style="@style/right_text"
+            android:textSize="22sp"/>  
+        
+    </TableRow>  
+</TableLayout>  
+
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Login" android:minWidth="250dp"
+            android:id="@+id/login" android:layout_gravity="center"
+            android:typeface="serif"
+            android:textSize="22sp"/>  
+</LinearLayout>

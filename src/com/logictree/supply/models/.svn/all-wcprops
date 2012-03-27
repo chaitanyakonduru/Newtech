@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Mobile/!svn/ver/1922/Android/NewTec/src/com/logictree/supply/models
+END
+Product.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Mobile/!svn/ver/1922/Android/NewTec/src/com/logictree/supply/models/Product.java
+END
+Order.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Mobile/!svn/ver/1922/Android/NewTec/src/com/logictree/supply/models/Order.java
+END
+NewOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Mobile/!svn/ver/1850/Android/NewTec/src/com/logictree/supply/models/NewOrder.java
+END
+Screen.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/Screen.java
+END
+EditOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Mobile/!svn/ver/1525/Android/NewTec/src/com/logictree/supply/models/EditOrder.java
+END
+Priority.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Mobile/!svn/ver/1874/Android/NewTec/src/com/logictree/supply/models/Priority.java
+END
+RoleScreen.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/RoleScreen.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Mobile/!svn/ver/1691/Android/NewTec/src/com/logictree/supply/models/Util.java
+END
+MyAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/MyAccount.java
+END
+AddCustomer.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/models/AddCustomer.java
+END
+Parser.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/Parser.java
+END
+Customer.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Mobile/!svn/ver/1888/Android/NewTec/src/com/logictree/supply/models/Customer.java
+END
+OrderInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/OrderInfo.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/UserInfo.java
+END
+LoginInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/LoginInfo.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/models/Role.java
+END
+Department.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Mobile/!svn/ver/1850/Android/NewTec/src/com/logictree/supply/models/Department.java
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictreeit/supply/listeners
+END
+NewCustomerAddListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictreeit/supply/listeners/NewCustomerAddListener.class
+END
+OrderAddListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictreeit/supply/listeners/OrderAddListener.class
+END
+NewOrderEditListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictreeit/supply/listeners/NewOrderEditListener.class
+END
+OrderEditListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictreeit/supply/listeners/OrderEditListener.class
+END
+FilterProductList.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictreeit/supply/listeners/FilterProductList.class
+END

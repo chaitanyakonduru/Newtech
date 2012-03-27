@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent" 
+  android:minHeight="60dip"
+  android:layout_height="wrap_content" >
+    <TextView
+            android:layout_height="wrap_content" 
+            android:id="@+id/neworder_productname"
+            android:textSize="20sp" 
+            android:textColor="#534d43"
+            android:gravity="left" android:textStyle="bold"
+            android:ellipsize="end"
+            android:padding="10dip"
+           android:layout_width="wrap_content"/>
+
+        <!-- <TextView
+            android:layout_height="wrap_content"
+           android:id="@+id/neworder_product_unit"
+            android:textSize="20sp"
+            android:textColor="#232323"  android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1" android:layout_width="0dp"/>
+       <TextView
+            android:layout_height="wrap_content" android:gravity="right"
+            android:id="@+id/neworder_product_deptname"
+            android:textSize="20sp" 
+            android:textColor="#EB2646"
+            android:layout_weight="2" android:layout_width="0dp"/> -->
+</LinearLayout>

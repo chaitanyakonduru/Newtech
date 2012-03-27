@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <!-- <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="0dip" android:layout_gravity="center" android:layout_weight="1">
+            <TextView android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingRight="10dip" android:textSize="16sp" android:text="Customer ID"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="0dip" android:layout_weight="2">
+            <EditText android:layout_height="wrap_content" android:layout_width="wrap_content" android:inputType="number"
+             android:enabled="false" android:cursorVisible="false" android:id="@+id/newCustomer_custid"  android:minWidth="150dip"></EditText>
+        </LinearLayout>
+    </LinearLayout> -->
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingRight="10dip" android:textSize="16sp" android:text="Customer Name"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <EditText android:layout_height="wrap_content" android:layout_width="wrap_content" android:singleLine="true" android:maxWidth="200dip"
+             android:id="@+id/newCustomer_custname"  android:inputType="textCapWords" android:minWidth="200dip"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+     <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingRight="10dip" android:textSize="16sp" android:text="Business Name"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <EditText android:layout_height="wrap_content" android:layout_width="wrap_content" android:singleLine="true" android:maxWidth="200dip"
+             android:id="@+id/newCustomer_businessname"  android:inputType="textCapWords" android:minWidth="200dip"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:paddingRight="10dip" android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="16sp" android:text="License Number"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <EditText android:layout_height="wrap_content" android:singleLine="true" android:maxWidth="200dip"
+                android:minWidth="200dip" android:id="@+id/newCustomer_lic"
+            android:layout_width="wrap_content"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView  android:paddingRight="10dip" android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="16sp" android:text="Address"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <EditText android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/newCustomer_address"
+            android:singleLine="true" android:maxWidth="200dip"
+            android:minWidth="200dip"></EditText>
+        </LinearLayout>
+        
+    </LinearLayout>
+    <LinearLayout  android:layout_width="match_parent" android:layout_height="wrap_content">
+   <LinearLayout android:layout_weight="1" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="0dip" android:layout_gravity="center">
+    <TextView android:layout_height="wrap_content"  android:paddingRight="10dip" android:layout_width="match_parent" android:layout_gravity="center" android:gravity="right" android:textSize="16sp" android:text="City"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="0dip" android:layout_weight="2">
+    <EditText android:layout_height="wrap_content" android:minWidth="200dip"  android:id="@+id/newCustomer_city"
+    android:singleLine="true" android:maxWidth="200dip" android:layout_width="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:paddingRight="10dip" android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="16sp" android:text="State"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+
+            <EditText
+                android:layout_width="wrap_content" android:id="@+id/newCustomer_state"
+                android:layout_height="wrap_content" android:singleLine="true"
+                android:minWidth="200dip" android:maxWidth="200dip" >
+</EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:gravity="right"  android:paddingRight="10dip" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="16sp" android:text="Zip Code"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <EditText android:layout_height="wrap_content" android:minWidth="200dip" android:maxWidth="200dip" android:id="@+id/newCustomer_zipcode"
+            android:layout_width="wrap_content" android:inputType="number"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView  android:paddingRight="10dip" android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="16sp" android:text="Phone Number"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <EditText android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/newCustomer_phno"
+           	android:maxLength="10" android:maxWidth="200dip"
+            android:minWidth="200dip" android:inputType="number"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView  android:paddingRight="10dip" android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:textSize="16sp" android:text="MSA Flag"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <CheckBox android:id="@+id/newCustomer_msa" android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingRight="10dip" android:textSize="16sp" android:text="Price Level"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <Spinner android:layout_height="wrap_content" android:id="@+id/newCustomer_price" android:layout_width="wrap_content" android:minWidth="200dip"></Spinner>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_width="0dip" android:layout_gravity="center">
+            <TextView android:gravity="right" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingRight="10dip" android:textSize="16sp" android:text="Status"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="2" android:layout_width="0dip">
+            <Spinner android:layout_height="wrap_content" android:id="@+id/newCustomer_status" android:layout_width="wrap_content" android:minWidth="200dip"></Spinner>
+        </LinearLayout>
+    </LinearLayout>
+   <!--  <LinearLayout 
+        android:orientation="horizontal" 
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+ 
+     <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+     android:id="@+id/custom_dialog_negativebutoon" android:textColor="@android:color/black"
+     android:gravity="center" android:textStyle="bold"
+    	   android:text="Cancel" android:textSize="22sp"/>
+ 
+     <Button android:layout_width="0dp" android:layout_height="wrap_content"  android:textColor="@android:color/black"
+  			  android:layout_weight="1" android:id="@+id/custom_dialog_positivebutoon"
+  			  android:gravity="center" android:textStyle="bold"
+    	   android:text="Submit" android:textSize="22sp"/>
+ 
+    </LinearLayout> -->
+</LinearLayout>

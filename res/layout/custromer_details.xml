@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/bg_order_details"
+    android:orientation="vertical">
+ <!-- android:background="#96A3B3" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Customer Details"
+        android:textSize="30sp"
+        android:textColor="#E35D14"
+        android:textStyle="bold"
+        android:typeface="serif"/>
+	<View android:layout_width="match_parent" android:layout_height="1dp" android:background="#000000" />
+	
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+         android:id="@+id/customer_details_layout"
+	   android:layout_weight="1" android:orientation="vertical" android:layout_marginTop="20dp"
+	   android:layout_marginLeft="40dp"  android:layout_marginRight="60dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Customer Id"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_custId"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Customer Name"
+            style="@style/left_text"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/customer_detail_custName"
+            android:layout_weight="2"
+          />
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Business Name"
+            style="@style/left_text"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/customer_detail_businessName"
+            android:layout_weight="2"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="LIC #"
+            style="@style/left_text"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_lic"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Address"
+            style="@style/left_text"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_address"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="City"
+            style="@style/left_text"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_city"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="State"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_state"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Phone Number"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_phno"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Status"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:textColor="#373737"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/customer_detail_status"
+            />
+    </LinearLayout>
+</LinearLayout>
+<TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/customers_empty"
+            android:text="Customers Empty"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="#000000"/>
+</LinearLayout>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/Mobile/!svn/ver/1950/Android/NewTec
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Mobile/!svn/ver/1446/Android/NewTec/default.properties
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Mobile/!svn/ver/1806/Android/NewTec/AndroidManifest.xml
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Mobile/!svn/ver/1446/Android/NewTec/project.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Mobile/!svn/ver/1446/Android/NewTec/.project
+END
+proguard.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Mobile/!svn/ver/1446/Android/NewTec/proguard.cfg
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Mobile/!svn/ver/1446/Android/NewTec/.classpath
+END

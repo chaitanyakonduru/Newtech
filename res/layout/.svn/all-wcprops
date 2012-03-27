@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Mobile/!svn/ver/1924/Android/NewTec/res/layout
+END
+layout_settings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_settings.xml
+END
+layout_orders.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_orders.xml
+END
+layout_product.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_product.xml
+END
+layout_new_order.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_new_order.xml
+END
+layout_newfragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Mobile/!svn/ver/1879/Android/NewTec/res/layout/layout_newfragment.xml
+END
+new_customer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Mobile/!svn/ver/1879/Android/NewTec/res/layout/new_customer.xml
+END
+actionbar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/actionbar.xml
+END
+popup_add_order.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Mobile/!svn/ver/1879/Android/NewTec/res/layout/popup_add_order.xml
+END
+order_list_header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Mobile/!svn/ver/1924/Android/NewTec/res/layout/order_list_header.xml
+END
+list_item_order.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Mobile/!svn/ver/1852/Android/NewTec/res/layout/list_item_order.xml
+END
+fragment_dashboard.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/fragment_dashboard.xml
+END
+device_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/device_list.xml
+END
+list_item_customer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Mobile/!svn/ver/1924/Android/NewTec/res/layout/list_item_customer.xml
+END
+layout_myaccount.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Mobile/!svn/ver/1729/Android/NewTec/res/layout/layout_myaccount.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/main.xml
+END
+fragment_tracks_dropdown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Mobile/!svn/ver/1780/Android/NewTec/res/layout/fragment_tracks_dropdown.xml
+END
+layout_order_details.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Mobile/!svn/ver/1924/Android/NewTec/res/layout/layout_order_details.xml
+END
+layout_new_tablerow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Mobile/!svn/ver/1879/Android/NewTec/res/layout/layout_new_tablerow.xml
+END
+fragment_new_order.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/fragment_new_order.xml
+END
+layout_customers.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_customers.xml
+END
+listview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/listview.xml
+END
+list_item_product.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Mobile/!svn/ver/1889/Android/NewTec/res/layout/list_item_product.xml
+END
+layout_department_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_department_fragment.xml
+END
+layout_neworder_product_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Mobile/!svn/ver/1780/Android/NewTec/res/layout/layout_neworder_product_list.xml
+END
+popup_edit_order.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/popup_edit_order.xml
+END
+custromer_details.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Mobile/!svn/ver/1889/Android/NewTec/res/layout/custromer_details.xml
+END
+add_product.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/add_product.xml
+END
+device_name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/device_name.xml
+END
+layout_login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Mobile/!svn/ver/1835/Android/NewTec/res/layout/layout_login.xml
+END
+layout_table_row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_table_row.xml
+END
+layout_home.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/layout_home.xml
+END
+colorstrip.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Mobile/!svn/ver/1446/Android/NewTec/res/layout/colorstrip.xml
+END
+layout_product_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Mobile/!svn/ver/1573/Android/NewTec/res/layout/layout_product_detail.xml
+END

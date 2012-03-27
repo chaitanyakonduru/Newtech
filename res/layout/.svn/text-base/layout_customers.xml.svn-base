@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/colorstrip" />
+
+    <LinearLayout android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <fragment
+            android:id="@+id/customerListFragment" android:layout_marginRight="5dp"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:name="com.logictree.supply.fragments.CustomerListFragment" />
+
+        <fragment
+            android:id="@+id/customerDetailFragment"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:name="com.logictree.supply.fragments.CustomerDetailFragment" />
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_order_details"
+    android:orientation="vertical">
+<!-- android:background="#96A3B3" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Product Details"
+        android:textSize="30sp"
+        android:textColor="#E35D14"
+        android:textStyle="bold"
+        android:typeface="serif"/>
+	<View android:layout_width="match_parent" android:layout_height="1dp" android:background="#000000" />
+	
+	   
+	<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+	    android:id="@+id/product_details_layout"
+	   android:layout_weight="1" android:orientation="vertical" android:layout_marginTop="10dp"
+	   android:layout_marginLeft="40dp"  android:layout_marginRight="60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Product ID"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/product_detail_id"
+            android:textColor="#373737"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Department Name"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#373737"
+            android:id="@+id/product_detail_deptName"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="UPC code"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/product_detail_upcCode"
+            android:textColor="#373737"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Unit"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_detail_unit"
+            android:layout_weight="2"
+            android:textColor="#373737"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Suggested Retail Price($)"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/product_detail_srp"
+            android:textColor="#373737"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Price($)"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#373737"
+            android:id="@+id/product_detail_price"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            style="@style/left_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Status"
+            android:textColor="#373737"/>
+		<TextView
+		    style="@style/center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="25sp"
+            android:textColor="#373737"/>
+        <TextView
+            style="@style/right_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/product_detail_status"
+            android:textColor="#373737"/>
+    </LinearLayout>
+</LinearLayout>
+<TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/products_empty"
+            android:text="Products Empty"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="#000000"/>
+</LinearLayout>

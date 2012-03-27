@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<com.logictree.supply.custom.DashboardLayout
+		android:id="@+id/dashboardLayout1" android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<Button android:id="@+id/home_btn_orders" style="@style/DashboardButton"
+			android:drawableTop="@drawable/btn_home_order" android:text="@string/home_orders"
+			android:textColor="#cc1d00" android:textSize="16sp" />
+
+		<Button android:id="@+id/home_btn_products" style="@style/DashboardButton"
+			android:drawableTop="@drawable/btn_home_product" android:text="@string/home_products" 
+			android:textColor="#cc1d00" android:textSize="16sp" />
+
+		<Button android:id="@+id/home_btn_customers" style="@style/DashboardButton"
+			android:drawableTop="@drawable/btn_home_customer" android:text="@string/customers"
+			android:textColor="#cc1d00" android:textSize="16sp" />
+
+		<Button android:id="@+id/home_btn_myaccount" style="@style/DashboardButton"
+			android:drawableTop="@drawable/btn_home_myaccount" android:text="@string/home_myaccount"
+			android:textColor="#cc1d00" android:textSize="16sp" />
+
+		<Button android:id="@+id/home_btn_settings" style="@style/DashboardButton"
+			android:drawableTop="@drawable/btn_home_settings" android:text="@string/home_settings"
+			android:textColor="#cc1d00" android:textSize="16sp" />
+		
+		<Button android:id="@+id/home_btn_reports" style="@style/DashboardButton"
+			android:textColor="#cc1d00" android:textSize="16sp" />
+	</com.logictree.supply.custom.DashboardLayout>
+
+</LinearLayout>

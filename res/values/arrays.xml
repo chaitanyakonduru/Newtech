@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="actionbar_list">
+	    	<item>Sort by Order</item>
+	    	<item>Sort by Business Name</item>
+	    	<item>Sort by Order Date</item>
+	    	<item>Sort by Order Status</item>
+	    </string-array>
+</resources>

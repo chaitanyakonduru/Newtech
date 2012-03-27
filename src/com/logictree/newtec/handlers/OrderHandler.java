@@ -1,0 +1,259 @@
+package com.logictree.newtec.handlers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.logictree.supply.activities.NewTecApp;
+import com.logictree.supply.models.Order;
+import com.logictree.supply.models.Product;
+import com.logictree.supply.network.ApiManager;
+import com.logictree.supply.network.DatabaseThread;
+
+public class OrderHandler extends NewTecHandler {
+	
+	
+
+	private static final String TAG = "OrderHandler";
+	// - <order>
+	// <id>28</id>
+	// <order_date>10/28/2011</order_date>
+	// <amount>0</amount>
+	// <customer_id>1</customer_id>
+	// <customer_name>Sandhya Burugu</customer_name>
+	// <order_by>John David</order_by>
+	// <status>Inactive</status>
+	// </order>
+
+	private List<Order> orders;
+	private StringBuffer buffer;
+	private boolean in = false;
+	private Order order;
+	private boolean inPro = false;
+	private List<Product> products;
+	private Product product;
+	private NewTecApp app;
+	private int priority;
+	private DatabaseThread databaseThread;
+
+	public OrderHandler(Context context, int priority) {
+		orders = new ArrayList<Order>();
+		buffer = new StringBuffer();
+		this.priority = priority;
+		if (this.priority == ApiManager.PRIORITY_REFRESH) {
+//			this.databaseThread = new DatabaseThread(context, databaseUpdateCompletion)
+		}
+		
+		this.app = (NewTecApp) context.getApplicationContext();
+	}
+
+	@Override
+	public void startDocument() throws SAXException {
+		super.startDocument();
+	}
+
+	@Override
+	public void endDocument() throws SAXException {
+		super.endDocument();
+	}
+
+	@Override
+	public void characters(char[] ch, int start, int length)
+	throws SAXException {
+		super.characters(ch, start, length);
+		if (in) {
+			buffer.append(ch, start, length);
+		}
+	}
+
+	// - <order>
+	// <id>137</id>
+	// <order_date>11/21/2011</order_date>
+	// <amount>1</amount>
+	// <customer_id>11</customer_id>
+	// <customer_name>Geeth Paruchuri</customer_name>
+	// <order_by>John David</order_by>
+	// <status>Active</status>
+	// <warehouse>True</warehouse>
+	// - <product_list>
+	// - <product>
+	// <id>166</id>
+	// <upc_code>76756458</upc_code>
+	// <product_description>COPEN Winter Pouches</product_description>
+	// <quantity>1</quantity>
+	// <total_unit>1</total_unit>
+	// <srp>1</srp>
+	// <sub_retail>1</sub_retail>
+	// <price>1</price>
+	// <total_cost>1</total_cost>
+	// </product>
+	// </product_list>
+	// </order>
+
+	@Override
+	public void startElement(String uri, String localName, String qName,
+			Attributes attributes) throws SAXException {
+		super.startElement(uri, localName, qName, attributes);
+
+		if (localName.equalsIgnoreCase("order")) {
+			order = new Order();
+			products = new ArrayList<Product>();
+			buffer.setLength(0);
+		} else if ("id".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("order_date".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("amount".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("customer_id".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("business_name".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("order_by".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("status".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("warehouse".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("product_list".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("product".equals(localName)) {
+			inPro = true;
+			in = true;
+			product = new Product();
+			buffer.setLength(0);
+		} else if ("id".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("upc_code".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("product_description".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("quantity".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("total_unit".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("srp".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("sub_retail".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("price".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		} else if ("total_cost".equals(localName)) {
+			in = true;
+			buffer.setLength(0);
+		}
+	}
+
+	@Override
+	public void endElement(String uri, String localName, String qName)
+	throws SAXException {
+		super.endElement(uri, localName, qName);
+		if (localName.equalsIgnoreCase("order")) {
+			orders.add(order);
+			order.setPriority(priority);
+			insertOder(order);
+		} else if ("id".equals(localName)) {
+			in = false;
+			if (!inPro) {
+				order.setOrderId(buffer.toString());
+			} else {
+				product.setProductId(buffer.toString());
+				inPro = false;
+			}
+		} else if ("order_date".equals(localName)) {
+			in = false;
+			order.setOrderDate(buffer.toString());
+		} else if ("amount".equals(localName)) {
+			in = false;
+			order.setAmount(buffer.toString());
+		} else if ("customer_id".equals(localName)) {
+			in = false;
+			order.setCustId(buffer.toString());
+		} else if ("business_name".equals(localName)) {
+			in = false;
+			order.setBusinessname(buffer.toString());
+		} else if ("order_by".equals(localName)) {
+			in = false;
+			order.setOrderBY(buffer.toString());
+		} else if ("status".equals(localName)) {
+			in = false;
+			order.setStatus(buffer.toString());
+		} else if ("warehouse".equals(localName)) {
+			in = false;
+			order.setWarehouse(buffer.toString().equalsIgnoreCase("True") ? true : false);
+		} else if ("product_list".equals(localName)) {
+			in = false;
+			order.setProducts(products);
+		} else if ("product".equals(localName)) {
+			in = false;
+			products.add(product);
+		} else if ("upc_code".equals(localName)) {
+			in = false;
+			product.setUpcCode(buffer.toString());
+		} else if ("product_description".equals(localName)) {
+			in = false;
+			product.setProductName(buffer.toString());
+		} else if ("quantity".equals(localName)) {
+			in = false;
+			product.setQuantity(buffer.toString());
+		} else if ("total_unit".equals(localName)) {
+			in = false;
+			product.setUnit(buffer.toString());
+		} else if ("srp".equals(localName)) {
+			in = false;
+			product.setSuggestedPrice(buffer.toString());
+		} else if ("sub_retail".equals(localName)) {
+			in = false;
+			product.setSubRetail(buffer.toString());
+		} else if ("price".equals(localName)) {
+			in = false;
+			product.setPrice(buffer.toString());
+		} else if ("total_cost".equals(localName)) {
+			in = false;
+			product.setTotalCost(buffer.toString());
+		}
+	}
+
+	@Override
+	public Object getContent() {
+		if(products != null){
+			Log.v(TAG,"Size of products  -- " +products.size());
+		}
+		return orders;
+	}
+
+	private void insertOder(final Order order){
+		if(order != null){
+			if(app.getUserId() != null) {
+				Log.v(TAG,"App userId - "+ app.getUserId() + "  OrderId  - "+order.getOrderId());
+				
+				if (order.getPriority() != ApiManager.PRIORITY_REFRESH) {
+					DatabaseThread databaseThread  = app.shareDatabaseThread();
+					databaseThread.addJob(order);
+				}
+			}
+		}
+	}
+}

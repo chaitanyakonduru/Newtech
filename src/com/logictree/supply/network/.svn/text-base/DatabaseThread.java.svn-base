@@ -1,0 +1,134 @@
+package com.logictree.supply.network;
+
+import java.util.PriorityQueue;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.logictree.supply.activities.NewTecApp;
+import com.logictree.supply.models.Customer;
+import com.logictree.supply.models.Department;
+import com.logictree.supply.models.Order;
+import com.logictree.supply.models.Product;
+
+public class DatabaseThread extends Thread {
+	private NewTecApp app;
+
+	private static final String TAG = "DatabaseThread";
+//	private Queue<Object> jobQueue1;
+	private PriorityQueue<Object> jobQueue1;
+	private boolean pause;
+    private onDatabaseUpdateCompletion databaseUpdateCompletion;
+	
+	public DatabaseThread(Context context) {
+		Log.v(TAG,"tag");
+//		jobQueue1 = new ArrayDeque<Object>();
+		jobQueue1 = new PriorityQueue<Object>();
+		app = (NewTecApp) context.getApplicationContext();
+	}
+	
+	public DatabaseThread(Context context , onDatabaseUpdateCompletion databaseUpdateCompletion) {
+		Log.v(TAG,"tag");
+//		jobQueue1 = new ArrayDeque<Object>();
+		jobQueue1 = new PriorityQueue<Object>();
+		app = (NewTecApp) context.getApplicationContext();
+		this.databaseUpdateCompletion = databaseUpdateCompletion;
+	}
+	
+
+	@Override
+	public void run() {
+		while (!isInterrupted()) {
+			synchronized (this) {
+				while (!isInterrupted() && (this.jobQueue1.isEmpty() || this.pause)) {
+					try {
+						Log.v(TAG, "inRunWait " + isInterrupted() + "Pause = " + pause
+								+ " : jobqueue Empty - " + jobQueue1.isEmpty());
+						wait();
+					} catch (InterruptedException e) {
+						interrupt();
+					}
+				}
+			}
+			
+			if (interrupted()) {
+				Log.v(TAG, "interrupted");
+				return;
+			}
+			
+			Object object = jobQueue1.poll();
+
+			if (object instanceof Order) {
+				Order order = (Order) object;
+
+				if(app.getUserId() != null)  app.shareDatabaseInstance().insertOrder(order, app.getUserId());
+				Log.v(TAG, "JobQueue - Order  " + jobQueue1.size() + "  "+jobQueue1.isEmpty());
+			} else if(object instanceof Product){
+				Product product = (Product) object;
+
+				if(app.getUserId() != null)  app.shareDatabaseInstance().insertProduct(product, "-1", app.getUserId(),"-1");
+				Log.v(TAG, "JobQueue - Product " + jobQueue1.size() + jobQueue1.isEmpty());
+			} else if(object instanceof Customer) {
+				Customer customer = (Customer) object;
+
+				if(app.getUserId() != null)  app.shareDatabaseInstance().insertCustomer(customer, app.getUserId());
+				Log.v(TAG, "JobQueue - Customer " + jobQueue1.size() + jobQueue1.isEmpty());
+			} else if(object instanceof Department) {
+				Department department = (Department) object;
+
+				if(app.getUserId() != null)  app.shareDatabaseInstance().insertDepartment(department, app.getUserId());
+				Log.v(TAG, "JobQueue - Department " + jobQueue1.size() + jobQueue1.isEmpty());
+			} else {
+				Log.v(TAG, " InValid object");
+			}
+
+			if (jobQueue1.isEmpty()) {
+				if(databaseUpdateCompletion != null)
+				databaseUpdateCompletion.databaseCompleted();
+			}
+			
+			if (isInterrupted()) {
+				Log.v(TAG, "MovingBack");
+				break;
+			}
+		}
+		
+		Log.v(TAG, "inRunWait " + isInterrupted());
+		if (this.jobQueue1 != null) {
+			Log.v(TAG, "clear ");
+			this.jobQueue1.clear();
+			this.jobQueue1 = null;
+		}
+	}
+
+	public synchronized void addJob(Object object) {
+		if (jobQueue1!= null && object != null) {
+			Log.v(TAG,"addjob");
+			boolean isEmpty = jobQueue1.isEmpty();
+			jobQueue1.offer(object);
+			if (isEmpty) {
+				Log.v(TAG, "empty");
+				notify();
+			}
+		}
+	}
+
+	public void clearJobs() {
+		if (jobQueue1 != null) {
+			jobQueue1.clear();
+		}
+	}
+
+	public synchronized void pause() {
+		this.pause = true;
+	}
+
+	public synchronized void unPause() {
+		this.pause = false;
+		notify();
+	}
+	
+	public static interface onDatabaseUpdateCompletion{
+		public void databaseCompleted();
+	}
+}

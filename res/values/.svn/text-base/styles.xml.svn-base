@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.IOSched" parent="android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@drawable/window_background</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="actionbarCompatLogoStyle">@style/ActionBarCompatLogo</item>
+    </style>
+
+    <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
+        <item name="android:windowBackground">@drawable/window_background_home</item>
+        <item name="android:actionBarStyle">@null</item>
+    </style>
+
+    <style name="ActionBarCompatLogo">
+        <item name="android:id">@+id/actionbar_compat_logo</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:clickable">false</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:contentDescription">@string/description_logo</item>
+        <item name="android:src">@drawable/actionbar_compat_logo</item>
+    </style>
+
+    <style name="ActionBarCompat">
+        <item name="android:id">@+id/actionbar_compat</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/actionbar_compat_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/actionbar_compat_background</item>
+    </style>
+
+    <style name="ActionBar" parent="android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:titleTextStyle">@style/ActionBarText</item>
+    </style>
+
+    <style name="ActionBarText">
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TextHeader">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="TextHeaderSub">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/body_text_2</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="TextHeader2">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="TextHeader3">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="left_text" parent="android:Widget.Holo.TextView">
+        <item name="android:gravity">right</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    
+    <style name="center_text" parent="android:Widget.Holo.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="right_text" parent="android:Widget.Holo.TextView">
+        <item name="android:textSize">23sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/new_tablerow_row" android:layout_width="match_parent"
+	android:layout_height="0dp" android:layout_weight="1"
+	android:collapseColumns="6">
+	
+	<TextView android:id="@+id/new_table_row_productid"
+		android:layout_width="0dp" android:layout_weight="0.6"
+		android:background="@drawable/cell_shape" android:ellipsize="end"
+		android:gravity="center" android:minWidth="200dip" android:padding="7dp"
+		android:singleLine="true" android:textColor="@color/table_textcolr"
+		android:textSize="20sp" />
+		
+	<TextView android:id="@+id/new_table_row_productname"
+		android:layout_width="0dp" android:layout_weight="3.5"
+		android:background="@drawable/cell_shape" android:ellipsize="end"
+		android:gravity="center" android:minWidth="200dip" android:padding="7dp"
+		android:singleLine="true" android:textColor="@color/table_textcolr"
+		android:textSize="20sp" />
+
+	<TextView android:id="@+id/new_table_row_qty"
+		android:layout_width="0dp" android:layout_weight="1"
+		android:background="@drawable/cell_shape" android:gravity="center"
+		android:ellipsize="end" android:singleLine="true"
+		android:padding="7dp" android:textColor="@color/table_textcolr"
+		android:textSize="20sp" />
+
+	<TextView android:id="@+id/new_table_row_price"
+		android:layout_width="0dp" android:layout_weight="1"
+		android:ellipsize="end" android:singleLine="true"
+		android:background="@drawable/cell_shape" android:gravity="center"
+		android:padding="7dp" android:textColor="@color/table_textcolr"
+		android:textSize="20sp" />
+
+	<LinearLayout android:id="@+id/new_action_layout" 
+		android:layout_width="0dip" android:layout_height="match_parent"
+		android:layout_weight="1" android:background="@drawable/cell_shape"
+		android:orientation="horizontal" android:visibility="gone">
+
+		<ImageButton android:id="@+id/new_table_row_edit" 
+			android:layout_width="0dip" android:layout_height="match_parent"
+			android:layout_weight="1" android:background="@android:color/transparent"
+			android:src="@drawable/btn_edit" />
+
+		<ImageButton android:id="@+id/new_table_row_delteButton"
+			android:layout_width="0dip" android:layout_height="match_parent"
+			android:layout_weight="1" android:background="@android:color/transparent"
+			android:src="@drawable/btn_delete" />
+	</LinearLayout>
+
+</TableRow>

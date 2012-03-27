@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Mobile/!svn/ver/1950/Android/NewTec/src/com/logictree/supply/fragments
+END
+ProductDetailFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/fragments/ProductDetailFragment.java
+END
+OrderDetailFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/fragments/OrderDetailFragment.java
+END
+CustomerDetailFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Mobile/!svn/ver/1888/Android/NewTec/src/com/logictree/supply/fragments/CustomerDetailFragment.java
+END
+NewOrderFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/fragments/NewOrderFragment.java
+END
+ProductListFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Mobile/!svn/ver/1850/Android/NewTec/src/com/logictree/supply/fragments/ProductListFragment.java
+END
+CustomerListFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Mobile/!svn/ver/1888/Android/NewTec/src/com/logictree/supply/fragments/CustomerListFragment.java
+END
+NewOrderListFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Mobile/!svn/ver/1778/Android/NewTec/src/com/logictree/supply/fragments/NewOrderListFragment.java
+END
+OrderListFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/fragments/OrderListFragment.java
+END
+CustomerListDialogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Mobile/!svn/ver/1721/Android/NewTec/src/com/logictree/supply/fragments/CustomerListDialogFragment.java
+END
+DashboardFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Mobile/!svn/ver/1446/Android/NewTec/src/com/logictree/supply/fragments/DashboardFragment.java
+END
+SettingsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Mobile/!svn/ver/2114/Android/NewTec/src/com/logictree/supply/fragments/SettingsFragment.java
+END
+DepartmentsFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Mobile/!svn/ver/1832/Android/NewTec/src/com/logictree/supply/fragments/DepartmentsFragment.java
+END

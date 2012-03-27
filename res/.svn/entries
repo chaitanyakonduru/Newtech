@@ -1,0 +1,58 @@
+10
+
+dir
+1989
+https://119.82.117.228:8443/svn/Mobile/Android/NewTec/res
+https://119.82.117.228:8443/svn/Mobile
+
+
+
+2012-01-19T13:17:35.484375Z
+1925
+silpa
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9ac9df62-d173-3e42-a51a-dae2a885b19f
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xlarge
+dir
+
+drawable-xlarge-nodpi
+dir
+
+layout
+dir
+
+menu
+dir
+
+values
+dir
+
+xml
+dir
+

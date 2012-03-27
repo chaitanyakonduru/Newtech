@@ -1,0 +1,257 @@
+package com.logictree.supply.network;
+
+import java.net.URLEncoder;
+import java.util.List;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.logictree.supply.models.Product;
+
+/**
+ * @author Srinivas
+ */
+public class ApiManager {
+
+	private static final String HOST_NAME = "http://mynewtec.com/mobile";
+//	private static final String HOST_NAME =  "http://logictreeit.com/projects/newtec/mobile";
+//	private static String HOST_NAME = null;
+
+	private static final String TAG = "ApiManager";
+
+	private static ApiManager apiManager;
+	private RequestThreadPoolExecutor threadPoolExecutor;
+	
+	
+	public  static final int PRIORITY_REFRESH = 100;
+
+	// Login:
+	// http://logictreeit.com/projects/newtec/mobile/login.php?email=admin@gmail.com&password=password
+	// Forgot password:
+	// http://logictreeit.com/projects/newtec/mobile/forgotpwd.php?email=new@gmail.com
+	// Orders list:
+	// http://logictreeit.com/projects/newtec/mobile/orderslist.php?userid=1
+	// Products list:
+	// http://logictreeit.com/projects/newtec/mobile/productslist.php
+	// Departments list:
+	// http://logictreeit.com/projects/newtec/mobile/deptslist.php
+	// Customers list:
+	// http://logictreeit.com/projects/newtec/mobile/customerslist.php
+	// Add new order:
+	//			
+	// Add new customer:
+	// http://logictreeit.com/projects/newtec/mobile/addcustomer.php?first_name=somu&last_name=sekhar&licence=3423423&address=street345&city=Heights&state=California&zipcode=95684&phone=9550705652&msa=1&price_level=1&status=1&userid=1
+	// My account:
+	// http://logictreeit.com/projects/newtec/mobile/myaccount.php?userid=38
+
+	// http://logictreeit.com/projects/newtec/mobile/myaccount.php?userid=38
+	// http://logictreeit.com/projects/newtec/mobile/neworder.php?userid=11&customerid=111&submit;
+	// "54353"-"11","54353"-"11",
+
+	// SEND = 0; SEND TO WARE HOUSE = 1
+
+	public static ApiManager getInstance(Context context) {
+		if (apiManager == null) {
+			apiManager = new ApiManager(context);
+		}
+		/*SharedPreferences sharedPreferences = PreferenceManager
+						.getDefaultSharedPreferences(context);
+		boolean testing = sharedPreferences.getBoolean(
+				"testing", false);
+		Log.v(TAG, "testing  "+testing);
+
+		if(testing) {
+			HOST_NAME = "http://logictreeit.com/projects/newtec/mobile";
+		} else {
+			HOST_NAME = "http://mynewtec.com/mobile";
+		}*/
+		return apiManager;
+	}
+
+	private ApiManager(Context context) {
+		threadPoolExecutor = new RequestThreadPoolExecutor("newtec");
+	}
+
+	public void login(final Context context,String email, String password,
+			final NewTecCallback<Object> callback) {
+		final String url = String.format(HOST_NAME
+				+ "/login.php?email=%s&password=%s", URLEncoder.encode(email
+						.trim()), URLEncoder.encode(password.trim()));
+		Log.v(TAG, "Login " + url);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+
+			public void run() {
+				Log.v(TAG, "Login " + "Call started");
+				HttpConn.call(url, HttpConn.GET, null, 
+						new NewTecResponseHandler(Util.REQ_LOGIN,context,0), handler);
+			}
+		});
+	}
+
+	public void getOrderList(final Context context , String userid, final int priority,
+			final NewTecCallback<Object> callback) {
+		// http://logictreeit.com/projects/newtec/mobile/orderslist.php?userid=1
+
+		final String urlString = String.format(HOST_NAME
+				+ "/orderslist.php?userid=%s", URLEncoder.encode(userid));
+
+		Log.v(TAG, "getOrderList" + urlString);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null, 
+						new NewTecResponseHandler(Util.REQ_ORDERS , context , priority), handler);
+			}
+		});
+	}
+
+	public void getProductList(final Context context, final int priority, final NewTecCallback<Object> callback) {
+		// http://logictreeit.com/projects/newtec/mobile/productslist.php
+
+		final String urlString = HOST_NAME + "/productslist.php";
+		Log.v(TAG, "ProductUrlString = " + urlString);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null, 
+						new NewTecResponseHandler(Util.REQ_PRODUCTS,context,priority), handler);
+			}
+		});
+	}
+
+	public void getDepartmentList(final Context context,final int priority, final NewTecCallback<Object> callback) {
+		// http://logictreeit.com/projects/newtec/mobile/deptslist.php
+
+		final String urlString = HOST_NAME + "/deptslist.php";
+		Log.v(TAG, "Dept UrlString = " + urlString);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null, 
+						new NewTecResponseHandler(Util.REQ_DEPARTMENTS,context,priority),
+						handler);
+
+			}
+		});
+	}
+
+	public void getCustomerList(final Context context, final int priority, final NewTecCallback<Object> callback) {
+
+		final String urlString = HOST_NAME + "/customerslist.php";
+		Log.v(TAG, "getCustomerList - " + urlString);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null, 
+						new NewTecResponseHandler(Util.REQ_CUSTOMERS, context,priority), handler);
+
+			}
+		});
+	}
+
+	public void getMyAccount(final Context context,String userId,
+			final NewTecCallback<Object> callback) {
+		// Add new customer:
+		// http://logictreeit.com/projects/newtec/mobile/addcustomer.php?first_name=somu&last_name=sekhar&licence=3423423&address=street345&city=Heights&state=California&zipcode=95684&phone=9550705652&msa=1&price_level=1&status=1&userid=1
+		// My account:
+		// http://logictreeit.com/projects/newtec/mobile/myaccount.php?userid=38
+		final String urlString = String.format(HOST_NAME
+				+ "/myaccount.php?userid=%s", URLEncoder.encode(userId));
+		Log.v(TAG, "MyACC - " + urlString);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null, 
+						new NewTecResponseHandler(Util.REQ_MYACC,context,0), handler);
+			}
+		});
+	}
+
+	public void addCustomer(final Context context,String firstName, String lastname, String businessname, String lic, String address,
+			String city, String state, String zipcode,
+			String phone, boolean msa, String priceLevel, String status,
+			String userId, final int priority, final NewTecCallback<Object> callback) {
+
+		// http://logictreeit.com/projects/newtec/mobile/addcustomer.php?first_name=somu&last_name=sekhar&licence=3423423&address=street345&city=Heights&state=California&zipcode=95684&phone=9550705652&msa=1&price_level=1&status=1&userid=1
+		final String urlString = String.format(	HOST_NAME
+				+ "/addcustomer.php?first_name=%s&last_name=%s&licence=%s&address=%s&city=%s&state=%s&zipcode=%s&phone=%s&msa=%s&price_level=%s&status=%s&userid=%s&business_name=%s",
+				URLEncoder.encode(firstName), URLEncoder.encode(lastname), URLEncoder.encode(lic), URLEncoder.encode(address), URLEncoder.encode(city), URLEncoder.encode(state),
+				URLEncoder.encode(zipcode), URLEncoder.encode(phone), msa == true ? 1 : 0, URLEncoder.encode(priceLevel),
+						status.equalsIgnoreCase("Active") ? 1 : 0, URLEncoder.encode(userId), URLEncoder.encode(businessname));
+		Log.v(TAG, "add customer - " + urlString);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null,
+						new NewTecResponseHandler(Util.REQ_ADD_CUSTOMER,context,priority),
+						handler);
+			}
+		});
+	}
+
+	public void getAddOrder(final Context context,List<Product> products, String userid,
+			String customerid, boolean submit,final int priority, String notes,
+			final NewTecCallback<Object> callback) {
+		final String data = Util.getOrderPostString(products);
+		// http://logictreeit.com/projects/newtec/mobile/neworder.php?userid=11&customerid=111&submit;
+		final String urlString = String.format(HOST_NAME
+				+ "/neworder.php?userid=%s&customerid=%s&submit=%s&payload=%s&notes=%s",
+				userid, customerid, submit  == true?"1":"0", data, URLEncoder.encode(notes));
+		Log.v(TAG, "getAddOrder - " + urlString);
+		Log.v(TAG, "Payload - " + data);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, data,
+						new NewTecResponseHandler(Util.REQ_ADD_ORDER,context,priority), handler);
+			}
+		});
+	}
+
+
+	/*public void getOrderInfo(final Context context, final String orderid , final NewTecCallback<Object> callback ){
+//		www.mynewtec.com/mobile/order_view.php?id=111
+
+		final String urlString = String.format(HOST_NAME
+				+ "/order_view.php?id=%s",orderid);
+		Log.v(TAG, "getAddOrderInfo - " + urlString);
+
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, null,
+						new NewTecResponseHandler(Util.REQ_ORDER_INFO, context), handler);
+			}
+		});
+
+	}*/
+
+
+	/*public void updateOrder(final Context context,List<Product> products, String userid,
+			String order_id, boolean submit,final int priority, String notes,
+			final NewTecCallback<Object> callback) {
+		final String data = Util.getOrderPostString(products);
+
+		final String urlString =String.format(HOST_NAME
+				+ "/order_edit.php?userid=%s&order_id=%s&submit=%s&payload=%s&notes=%s",
+				userid,order_id, submit  == true?"1":"0", data, URLEncoder.encode(notes));
+
+
+		Log.v(TAG, "getupdateOrder - " + urlString);
+		Log.v(TAG, "Payload - " + data);
+		final MyHandler handler = new MyHandler(callback);
+		threadPoolExecutor.execute(new Runnable() {
+			public void run() {
+				HttpConn.call(urlString, HttpConn.GET, data,
+						new NewTecResponseHandler(Util.REQ_EDIT_ORDER,context,priority), handler);
+			}
+		});
+	}*/
+
+}

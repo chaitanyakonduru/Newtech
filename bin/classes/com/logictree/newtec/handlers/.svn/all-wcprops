@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Mobile/!svn/ver/1476/Android/NewTec/bin/classes/com/logictree/newtec/handlers
+END
+MyAccountHandler$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/MyAccountHandler$1.class
+END
+DepartmentHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/DepartmentHandler.class
+END
+NewTecHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/NewTecHandler.class
+END
+MyAccountHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/MyAccountHandler.class
+END
+ProductHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/ProductHandler.class
+END
+CustomerHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/CustomerHandler.class
+END
+OrderHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/OrderHandler.class
+END
+AddOrderHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/AddOrderHandler.class
+END
+OrderInfoHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/OrderInfoHandler.class
+END
+LoginHandler.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Mobile/!svn/ver/1446/Android/NewTec/bin/classes/com/logictree/newtec/handlers/LoginHandler.class
+END

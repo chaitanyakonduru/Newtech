@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+	<!-- <color name="accent_1">#ff29549f</color> -->
+	<color name="accent_1">#ff03345E</color>
+	<color name="actionbar_text">#ff29549f</color>
+	<color name="body_text_1">#ff000000</color>
+	<color name="body_text_2">#99000000</color>
+	<color name="list_item_1">#ffffffff</color>
+	<color name="list_item_2">#fff6f6f6</color>
+	<color name="list_item_3">#ffeae1da</color>
+	<color name="table_textcolr">#ff373737</color>
+	<color name="black">#ff000000</color>
+	<color name="dept_listitem">#80000000</color>
+	<color name="dept_listitem_selected">#20ffffff</color>
+</resources>

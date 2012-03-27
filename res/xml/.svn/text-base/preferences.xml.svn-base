@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Orders">
+        <CheckBoxPreference android:title="Syc with Server" android:key="syc_with_server"
+            android:defaultValue="false"></CheckBoxPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Downloads">
+        <Preference android:title="Download and Update" android:key="download_update"
+        ></Preference>
+    </PreferenceCategory>
+    <!--  <PreferenceCategory android:title="TestMode">
+        <CheckBoxPreference android:title="ProductionServer" android:key="testing"
+            android:defaultValue="false"></CheckBoxPreference>
+    </PreferenceCategory> -->
+</PreferenceScreen>
